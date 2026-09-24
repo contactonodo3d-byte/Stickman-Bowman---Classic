@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" role="img" aria-labelledby="title desc">
+  <title id="title">A little target practice</title>
+  <desc id="desc">Birds glide overhead while a stickman draws his bow, releases an arrow and misses. The birds fly safely onward.</desc>
+  <style>
+    .bird-one{animation:cross 6s linear infinite}.bird-two{animation:cross 6s linear infinite;animation-delay:-3s}
+    .wings{animation:flap .6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .shot{animation:shoot 6s linear infinite;transform-origin:260px 89px}
+    .rear{animation:draw 6s ease-in-out infinite;transform-origin:182px 103px}
+    @keyframes cross{from{transform:translate(-35px,0)}to{transform:translate(500px,0)}}
+    @keyframes flap{0%,100%{transform:scaleY(1)}50%{transform:scaleY(-.6)}}
+    @keyframes shoot{0%,43%{opacity:0;transform:translate(0,0) rotate(-9deg)}44%{opacity:1;transform:translate(0,0) rotate(-9deg)}59%{opacity:1;transform:translate(260px,-22px) rotate(6deg)}60%,100%{opacity:0;transform:translate(260px,-22px) rotate(6deg)}}
+    @keyframes draw{0%,12%{transform:rotate(8deg)}36%,43%{transform:rotate(-7deg)}46%{transform:rotate(15deg)}60%,100%{transform:rotate(8deg)}}
+    @media(prefers-reduced-motion:reduce){.bird-one,.bird-two,.wings,.shot,.rear{animation:none}.bird-one{transform:translate(320px,0)}.bird-two{transform:translate(380px,0)}.shot{opacity:0}}
+  </style>
+  <path d="M30 199 Q180 192 432 199" fill="none" stroke="#c8cec8" stroke-width="2"/>
+  <ellipse cx="194" cy="198" rx="76" ry="6" fill="#e9ece5"/>
+  <g fill="none" stroke="#d8dfdc" stroke-width="2" stroke-linecap="round">
+    <path d="M45 49 Q56 25 74 39 Q87 17 104 36 Q125 32 130 49Z"/>
+    <path d="M339 158 Q355 139 369 154 Q387 131 401 157"/>
+  </g>
+  <circle cx="182" cy="64" r="23" fill="#e8614e" stroke="#24272e" stroke-width="6"/>
+  <g fill="none" stroke="#24272e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M182 89 191 139 156 193 143 195 M191 139 228 192 241 195"/>
+    <path d="M185 104 222 101 266 92"/>
+    <path class="rear" d="M185 104 143 112 183 91"/>
+  </g>
+  <path d="M255 44 Q307 91 274 143" fill="none" stroke="#b77445" stroke-width="5" stroke-linecap="round"/>
+  <path d="M255 44 205 91 274 143" fill="none" stroke="#737e7a" stroke-width="1.8">
+    <animate attributeName="d" dur="6s" repeatCount="indefinite" keyTimes="0;.12;.36;.43;.46;.6;1" values="M255 44 205 91 274 143;M255 44 205 91 274 143;M255 44 181 91 274 143;M255 44 181 91 274 143;M255 44 266 92 274 143;M255 44 205 91 274 143;M255 44 205 91 274 143"/>
+  </path>
+  <path class="shot" d="M220 91 290 91 M290 91 280 86 M290 91 280 96 M231 91 221 85 M231 91 221 97" fill="none" stroke="#885332" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
